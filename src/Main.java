@@ -26,6 +26,7 @@ public class Main {
         list.addToFront(11);
         list.addToBack(12);
         list.addToBack(13);
+        list.addToBack(13);
         System.out.println(list.toString());
 //        list.addToFront(3);
 //        System.out.println(list.toString());
