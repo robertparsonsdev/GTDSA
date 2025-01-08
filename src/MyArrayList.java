@@ -107,9 +107,21 @@ public class MyArrayList<T> {
      * @return the data formerly located at the front of the list
      * @throws java.util.NoSuchElementException if the list is empty
      */
-//    public T removeFromFront() {
-//        // WRITE YOUR CODE HERE (DO NOT MODIFY METHOD HEADER)!
-//    }
+    public T removeFromFront() {
+        if (size == 0) {
+            throw new IllegalArgumentException("null list");
+        }
+
+        T firstInList = backingArray[0];
+
+        for (int i = 1; i < backingArray.length; i++) {
+            backingArray[i - 1] = backingArray[i];
+            backingArray[i] = null;
+        }
+
+        size--;
+        return firstInList;
+    }
 
     /**
      * Removes and returns the last data of the list.
